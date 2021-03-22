@@ -3,20 +3,45 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paw Prosthetics Landing Page</title>
     <link rel="stylesheet" href="css/design.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav>Nav Bar Here</nav>
+    <!-- -->
 
+
+    <!-- NAV BAR: Took a long time to make due to issues with the above links to bootstrap. Refreshing them and using new links seems to have solved the problem and allowed for the navbar to function both as it's default and as my customized version. Attempts to code it in HTML were also failing to get the look I liked, so I ended up using bootstrap styling and customizing in CSS... Setup in Bootstrap built off of logic learned from this https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp and this https://getbootstrap.com/docs/4.3/components/navbar/ a few videos were also watched but both were of low quality and didn't actually yield results. Ultimately this link also proved useful for making some smaller adjustments to the way my nav was laid out to get it to collapse easier-->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bgpawprosblue">
+        <a href="#" class="navbar-brand">
+            <img src="images/paw%20prosthetics%20logo.png" height="40">
+            <!-- My logo -->
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link">Pet Owners 🐕</a>
+                <a href="#" class="nav-item nav-link">Makers ⚙️</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- basic structure was created by following along with https://www.youtube.com/watch?v=9Yg3PWTgso4 however several problems existed requiring a few hours of reworking into what it is now. Some crude mix between bootstrap and normal html/css. Had to figure out responsiveness myself, but it is working fairly well now  -->
     <section class="hero">
         <div class="container">
             <h1>Paw Prosthetics</h1>
@@ -37,19 +62,151 @@
 
 
     <div class="featured">
+        <!-- basic skeleton created as result of following along "8 Create CSS Grid Landing Page + Text Alignment | Ultimate CSS Grid in easy steps" by Mark Shufflebottom -->
         <div class="featuredText">
             <h2 class="text-center">About Paw Prosthetics</h2>
             <hr style="height:2px; width: 50%; border-width:0; color:#0094CB; background-color:#0094CB; margin-top: 10px;">
 
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kef6ZkdgPM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
             <p>Paw Prosthetics Is your go to place for Animal Ortho Device needs, be it a prosthetic limb, a brace, or just advice Paw Prosthetics is here to help you start improving animal lives today.
                 <br>
-                <br> Our aim is to make Ortho devices accessible to even more people through modern crowd sourcing and our community of creators. Pet Prosthetics is aims to be a place where both Pet Owners and Creators can work together to improve the lives of pets.</p>
+                <br> Our aim is to make Ortho devices accessible to even more people through modern crowd sourcing and our community of creators. Pet Prosthetics is aims to be a place where both Pet Owners and Makers can work together to improve the lives of pets.</p>
+
+
+
+
+            <div class="row">
+                <div class="col">
+                    <img src="images/pugchair.jpg" class="img-fluid" alt="Responsive image">
+
+                </div>
+                <div class="col">
+                    <img src="images/dog3leg.jpg" class="img-fluid" alt="Responsive image">
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col padding-left">
+                    <div class="petOwner">
+                        <img src="images/dogwalk.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 class="text-center">Pet Owner Experience</h3>
+                        <hr style="height:2px; width: 100%; border-width:0; color:#0094CB; background-color:#0094CB; margin-top: 10px; margin-bottom: 15px;">
+                        <p2>Through the Pet Owner side of Paw Prosthetics, Pet Owners are able to learn if the prosthetic or orthotic route might be right for their pet. Pet Owners who decide to move forward can see if they're in range of pre-existing professional businesses or if their needs are simple enough Pet Owners can work with Makers skilled in 3D modeling and printing to create a model.</p2>
+                        <img src="images/create%20a%20request%20v2.png" style="margin-top: 15px;" class="img-fluid" alt="Responsive image">
+                        <p>With our reqest post system, anyone with a pet in need can create a request and attempt to find a maker to work with locally or remotely. With filters to help Pet Owners find the experience they need and with the freedom to discuss budgets and more, Paw Prosthetics works to ensure that even if you are unable to get Professional Businesses to help your Pet you can still help improve the life of your pet.</p>
+                        <img src="images/maker%20selection.png" class="img-fluid" alt="Responsive image">
+
+
+                        <div class="buttonHolder justify-content-center">
+                            <!-- Found out you can use justify content center to add in a center aligned flex with this source: https://getbootstrap.com/docs/4.0/utilities/flex/ -->
+                            <button type="button" class="btn btn-primary btn-lg  justify-content-center">Visit Pet Owner Site</button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col padding-right">
+                    <div class="maker">
+                        <img src="images/Maker.jpg" class="img-fluid" alt="Responsive image">
+                        <h4 class="text-center">The Maker Experience</h4>
+                        <hr style="height:2px; width: 100%; border-width:0; color:#FF8001; background-color:#FF8001; margin-top: 10px; margin-bottom: 15px;">
+                        <p2>Through the Maker orientated side of Paw Prosthetics, Makers are able to browse Pet Owner requests for work in their area, make use of Maker Community Hub features and share/download Prosthetic and Orthotic device models to help fellow Makers and Pet Owners alike. Makers have the ability to browse for requests that speak to their skill sets and with our built in chat system, communication with clients has never been easier! </p2>
+                        <img src="images/maker1.png" style="margin-top: 15px;" class="img-fluid" alt="Responsive image">
+                        <h4 class="text-center">Make a Change</h4>
+                        <hr style="height:2px; width: 100%; border-width:0; color:#FF8001; background-color:#FF8001; margin-top: 10px; margin-bottom: 15px;">
+
+                        <p2>Paw Prosthetics goal is to help both Makers and Pet Owners make a change in the world. As Makers our users are able to not only get experience and profit from their work but also help to improve the lives of Pets in need whose Owners can't use the services of established businesses. Makers can help to ensure no Pet has to go without these life changing devices. </p2>
+                        <img src="images/maker2.png" style="margin-top: 15px;" class=" img-fluid " alt="Responsive image ">
+
+
+                        <div class="buttonHolder justify-content-center ">
+                            <!-- Found out you can use justify content center to add in a center aligned flex with this source: https://getbootstrap.com/docs/4.0/utilities/flex/ -->
+                            <button type="button " class="btn btn-secondary btn-lg justify-content-center ">Visit Maker Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center">Commitment to Safety and Fairness</h2>
+            <hr style="height:2px; width: 77%; border-width:0; color:#0094CB; background-color:#0094CB; margin-top: 10px;">
+
+            <p2>With Orthotic/Prosthetic and Kinesiology certification taking 2-4 years in Canada, Paw Prosthetics is dedicated to ensuring Makers and Pet Owners are able to interact and create not only safely but responsibly. Not only providing a wealth of information for Pet Owners to decide if the option is right for them but ensuring Makers know their limits and consider the challenges of undertaking more complicated work. While something like a Wheelchair type prosthetic is relatively simple and could be created by a Maker, more complicated pieces like limb replacements may be best left to the professionals for those able to seek their assistance. </p2>
+
+            <div class="image-holder">
+                <img src="images/gettingStarted.png" style=" width: 60%; border-style: solid; border-color: #0094CB; margin-top: 15px; margin-bottom: 15px;" class=" img-fluid " alt="Responsive image ">
+            </div>
+            <p2>With Orthotic/Prosthetic and Kinesiology certification taking 2-4 years in Canada, Paw Prosthetics is dedicated to ensuring Makers and Pet Owners are able to interact and create not only safely but responsibly. Not only providing a wealth of information for Pet Owners to decide if the option is right for them but ensuring Makers know their limits and consider the challenges of undertaking more complicated work. While something like a Wheelchair type prosthetic is relatively simple and could be created by a Maker, more complicated pieces like limb replacements may be best left to the professionals for those able to seek their assistance. </p2>
+            <div class="image-holder">
+                <img src="images/payment.png" style=" width: 60%; border-style: solid; border-color: #0094CB; margin-top: 15px; margin-bottom: 15px;" class=" img-fluid " alt="Responsive image ">
+            </div>
+
+            <h2 class="text-center">The Paw Prosthetic Mission</h2>
+            <hr style="height:2px; width: 60%; border-width:0; color:#0094CB; background-color:#0094CB; margin-top: 10px;">
+
+            <p2>Our aim is to make Ortho devices accessible to even more people through modern crowd sourcing and our community of creators. Pet Prosthetics is aims to be a place where both Pet Owners and Creators can work together to improve the lives of pets everywhere.
+                <br>
+                <br> With a dedicated system and design for both Pet Owners and Makers, no matter your skill level or knowledge, Paw Prosthetic aims to provide for the specific needs of each user. With Pet Orthotic and Prosthetic devices being limited in availability due to region, growing costs and other factors limiting the spread of professional Prosthetic and Orthotic businesses servicing Pet Owners, Paw Prosthetic aims to provide an option for Pet Owners regardless of location and wealth. </p2>
+            <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
+                <div class="col">
+                    <img src="images/threeleglaying.png" class="img-fluid" alt="Responsive image">
+
+                </div>
+                <div class="col">
+                    <img src="images/dogprosthetic.jpg" class="img-fluid" alt="Responsive image">
+
+                </div>
+            </div>
+
+
+            <h2 class="text-center">Interested in Getting in Touch?</h2>
+            <hr style="height:2px; width: 65%; border-width:0; color:#0094CB; background-color:#0094CB; margin-top: 10px;">
+
+            <div class="contactForm">
+                <input type="text" id="fname" placeholder="Your Email Address...">
+                <textarea id="subject" placeholder="Type something..." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </div>
 
         </div>
+
+
+
+
+
+
+
     </div>
 
 
+    <footer class="footer">
+        <div class="containerFooter">
 
+            <!-- Instagram Logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg>
+
+            <!-- Twitter Logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg>
+
+            <!-- Facebook Logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+
+
+
+            </svg>
+        </div>
+    </footer>
 </body>
 
 </html>

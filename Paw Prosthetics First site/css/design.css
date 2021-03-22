@@ -10,20 +10,47 @@ font-family: 'Raleway', sans-serif;*/
 
 /* vh= viewport height, number is a percentage */
 
+
+/*Added after reading https://stackoverflow.com/questions/41771091/bootstrap-content-small-on-phone trying to trouble shoot, not sure if it did anything but they sai it should be in here by default so.*/
+
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
     background-color: #D7DDDE;
+}
+@-ms-viewport {
+    width: device-width;
 }
 * {
     box-sizing: border-box;
 }
-nav {
+.bgpawprosblue {
+    /* Navbar background color */
     background: #2699FB;
-    color: #fff;
-    padding: 20px;
+}
+.navbar-nav {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+    /* My previous failed attempt to color the nav color: white !important; */
+    margin-left: 40%;
+    padding-right: 40px !important;
+}
+
+/*After much struggle and testing I finally managed to figure out how to override Bootstrap's old Nav colors, none of the articles and videos online I could find online worked*/
+
+.nav-item {
+    color: white !important;
+}
+.nav-item:hover {
+    color: #D1D1D1 !important;
+}
+nav .navbar-nav li a {
+    color: white !important;
 }
 
 /* THIS IS THE BANNER SECTION */
@@ -34,6 +61,7 @@ nav {
     background-size: cover;
     padding-top: 3vh;
     padding-bottom: 30vh;
+    margin-top: 65px !important;
 }
 section h1 {
     font-family: 'Oswald', sans-serif;
@@ -47,16 +75,17 @@ section h1 {
 section p {
     padding-top: 3rem;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.4v;
     text-shadow: 1px 1px 1px #000;
     padding-left: 0.2rem;
     padding-bottom: 6vh;
     color: white;
+    min-width: 100px !important;
 }
 section p2 {
     padding-top: 5rem;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     text-shadow: 1px 1px 1px #000;
     padding-left: 0.2rem;
     color: white;
@@ -74,20 +103,24 @@ section a:hover {
 
 /* THIS IS THE END OF THE BANNER SECTION */
 
+
+/* FEATURE AND FEATURED TEXT make up the entire body of the site. */
+
 .featured {
     /* vw= viewport width, number is a percentage */
-    width: 100vw;
+    width: 100%;
     background: rgb(200, 200, 200);
     display: grid;
 }
 .featuredText {
     width: 66.66%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 9vw;
+    padding-right: 9vw;
     /* margin: auto auto; */
     /* justify-self: end; */
     align-self: end;
     margin: 0 auto;
+    margin-bottom: 100px;
     background-color: white
 }
 h2 {
@@ -96,9 +129,201 @@ h2 {
     color: #0094CB !important;
     font-size: 2.5vw !important;
     margin-top: 10px !important;
+    min-width: 130px;
 }
+
+/* p is used to start off sections */
+
 p {
+    padding-top: 24px !important;
     font-size: 1.4vw;
     font-family: 'Raleway', sans-serif;
     color: #737E84;
+    min-width: 160px;
+}
+
+/* p2 mimics p but is more standard and has better margins for most segmented parts */
+
+p2 {
+    padding-top: 0px !important;
+    font-size: 1.4vw;
+    font-family: 'Raleway', sans-serif;
+    color: #737E84;
+    min-width: 160px;
+    margin-bottom: 50px !important;
+}
+
+/* PET OWNER side of the breakdown */
+
+.petOwner {
+    border-color: #0094CB !important;
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+}
+.padding-right {
+    margin-top: 10px;
+    padding-left: 5px !important;
+    padding-right: 0 !important;
+}
+
+/* MAKER side of the breakdown */
+
+.maker {
+    border-color: #FF8001 !important;
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+}
+.padding-left {
+    margin-top: 10px;
+    padding-left: 0 !important;
+    padding-right: 5px !important;
+}
+
+/* h3 Headers serve as the standard while the slightly adjusted h4 serve in the segmented part */
+
+h3 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: bold !important;
+    color: #0094CB !important;
+    font-size: 2.3vw !important;
+    margin-top: 10px !important;
+    min-width: 130px;
+}
+h4 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: bold !important;
+    color: #FF8001 !important;
+    font-size: 2.3vw !important;
+    margin-top: 10px !important;
+    min-width: 130px;
+}
+
+/* Button holder keeps the text aligned */
+
+.buttonHolder {
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+/* PET OWNER BUTTON */
+
+.btn-primary {
+    color: white !important;
+    background-color: #2699FB !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.2vw !important;
+    width: 80%;
+    border-style: solid !important;
+    border-width: medium!important;
+    border-color: #0094CB !important;
+}
+.btn-primary:hover {
+    color: white !important;
+    background-color: #69B0EC !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.2vw !important;
+    width: 80%;
+    border-style: solid !important;
+    border-width: medium!important;
+    border-color: #0094CB !important;
+}
+
+/* MAKER BUTTON */
+
+.btn-secondary {
+    color: white !important;
+    background-color: #FF8001 !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.2vw !important;
+    width: 80%;
+    border-style: solid !important;
+    border-width: medium!important;
+    border-color: #CD6804 !important;
+}
+.btn-secondary:hover {
+    color: white !important;
+    background-color: #FFAE5E !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.2vw !important;
+    width: 80%;
+    border-style: solid !important;
+    border-width: medium!important;
+    border-color: #CD6804 !important;
+}
+
+/* Just holds images centered */
+
+.image-holder {
+    text-align: center;
+}
+
+/* Contact form stuff, builty by following the logic of this https://www.w3schools.com/howto/howto_css_contact_form.asp but with removal of php elements and restructuring.*/
+
+.contactForm {
+    padding: 20px;
+    font-size: 1.4vw;
+    /* necessary as I couldn't change the "subject" part of the body to fit the typography style any other way for some reason */
+    font-family: 'Raleway', sans-serif;
+    color: #737E84;
+    margin-bottom: 20px;
+}
+
+/* General styling for entire segment */
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    border-color: #0094CB;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-size: 1.4vw;
+    font-family: 'Raleway', sans-serif;
+    color: #737E84;
+    resize: vertical;
+    /* lets user write more */
+}
+
+/* button to submit */
+
+input[type=submit] {
+    background-color: #2699FB;
+    color: white;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.2vw !important;
+    width: 20%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border-style: solid !important;
+    border-width: medium!important;
+    border-color: #0094CB !important;
+}
+input[type=submit]:hover {
+    background-color: #69B0EC;
+    border-style: solid !important;
+    border-width: medium!important;
+    border-color: #0094CB !important;
+}
+.footer {
+    background-color: #0094CB;
+}
+.containerFooter {
+    text-align: end;
+    padding-top: 1.5%;
+    padding-right: 5%;
+    color: white;
+    height: 70px;
 }
